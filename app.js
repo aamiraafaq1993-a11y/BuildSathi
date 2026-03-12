@@ -24,7 +24,7 @@ function showLabours() {
 
   labours.forEach(l => {
     list.innerHTML += `
-      <div class="card">
+      <div>
         <h3>${l.name}</h3>
         <p>${l.work}</p>
         <p>${l.phone}</p>
