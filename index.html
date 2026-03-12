@@ -10,70 +10,24 @@
 <h1>BuildSathi</h1>
 <p>Machines, Labour & Material – Sab ek jagah</p>
 
-<div class="menu">
-
-<button onclick="showMachines()">Machine Booking</button>
-
-<button onclick="showLabour()">Labour Finder</button>
-
-<button onclick="showMaterial()">Material Rate</button>
-
-</div>
-
-<div id="content"></div>
-
-<script src="app.js"></script>
-
-</bodylet labours = [];
-
-function addLabour() {
-  let name = document.getElementById("name").value;
-  let work = document.getElementById("work").value;
-  let phone = document.getElementById("phone").value;
-
-  if(name === "" || work === "" || phone === "") {
-    alert("Sab details bharo");
-    return;
-  }
-
-  labours.push({name, work, phone});
-  showLabours();
-
-  document.getElementById("name").value = "";
-  document.getElementById("work").value = "";
-  document.getElementById("phone").value = "";
-}
-
-function showLabours() {
-  let list = document.getElementById("labourList");
-  list.innerHTML = "";
-
-  labours.forEach(l => {
-    list.innerHTML += `
-      <div class="card">
-        <h3>${l.name}</h3>
-        <p>${l.work}</p>
-        <p>${l.phone}</p>
-      </div>
-    `;
-  });
-}>
-</html>
-
 <h2>Add Labour</h2>
 
 <input type="text" id="name" placeholder="Labour Name">
 <br><br>
 
-<input type="text" id="skill" placeholder="Skill (Mason / Helper)">
+<input type="text" id="work" placeholder="Skill (Mason / Helper)">
 <br><br>
 
-<input type="number" id="wage" placeholder="Daily Wage">
+<input type="text" id="phone" placeholder="Phone Number">
 <br><br>
 
 <button onclick="addLabour()">Add Labour</button>
 
 <h3>Labour List</h3>
 
+<div id="labourList"></div>
 
-<ul id="labourList"></ul>
+<script src="app.js"></script>
+
+</body>
+</html>
