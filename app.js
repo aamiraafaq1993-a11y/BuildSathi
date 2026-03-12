@@ -11,18 +11,11 @@ document.getElementById("content").innerHTML = `
 }
 
 function showLabour(){
-list.innerHTML += `
-<div class="card">
-<h3>${l.name}</h3>
-<p>${l.work}</p>
-<p>${l.phone}</p>
-
-<a href="tel:${l.phone}">
-<button>Call</button>
-</a>
-
-</div>
-`;}
+document.getElementById("content").innerHTML = `
+<h2>Labour Services</h2>
+<p>Mason, Helper, Electrician available</p>
+`;
+}
 
 function showMaterial(){
 document.getElementById("content").innerHTML = `
@@ -35,4 +28,3 @@ document.getElementById("content").innerHTML = `
 </ul>
 `;
 }
-
